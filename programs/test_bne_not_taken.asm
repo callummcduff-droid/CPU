@@ -1,0 +1,5 @@
+LOADI R1, 5
+LOADI R2, 5
+BNE R1, R2, taken
+LOADI R3, 10
+taken: HALT

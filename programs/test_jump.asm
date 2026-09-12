@@ -1,0 +1,6 @@
+LOADI R1, 5
+JMP target
+LOADI R2, 99
+LOADI R3, 99
+target: LOADI R2, 10
+HALT

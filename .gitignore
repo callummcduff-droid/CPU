@@ -1,0 +1,24 @@
+# Build/generated directories
+build/
+obj_dir/
+waves/
+
+# FPGA generated output
+*.bit
+
+# Simulation output
+*.vcd
+*.fst
+
+# Verilator/generated files
+*.o
+*.a
+
+# Editor files
+.vscode/
+.DS_Store
+
+# Accidental/generated files visible in project root
+--Mdir
+--top-module
+(null).hex
