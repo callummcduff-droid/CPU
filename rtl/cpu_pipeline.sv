@@ -148,6 +148,7 @@ module cpu (
 
     mem_wb_reg u_mem_wb_reg(.clk(clk), .reset(reset), .mem_wb_next(mem_wb_next), .mem_wb_cur(mem_wb_cur));
 
+    //Forwarding unit
     fwd_unit u_fwd_unit(.id_ex_rs(id_ex_cur.fields.rs), .id_ex_rt(id_ex_cur.fields.rt),
     .id_ex_alu_src(id_ex_cur.control.alu_src), .id_ex_is(id_ex_cur.fields.op),
     .ex_mem_rd(ex_mem_cur.write_reg), .mem_wb_rd(mem_wb_cur.write_reg),
@@ -155,6 +156,7 @@ module cpu (
     .mem_wb_write(mem_wb_cur.control.reg_write), .ex_mem_is(ex_mem_cur.fields.op),
     .fwd_a(fwd_a), .fwd_b(fwd_b), .fwd_store_data(fwd_store_data));
 
+    //Hazard unit
     hazard_unit u_hazard_unit(.clk(clk), .id_ex_mem_read(id_ex_cur.control.mem_read),
     .id_ex_branch(id_ex_cur.control.branch), .halt(id_ex_cur.control.halt),
     .id_ex_is(id_ex_cur.fields.op), .id_ex_target(id_ex_cur.fields.rt), 

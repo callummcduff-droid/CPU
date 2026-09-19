@@ -1,4 +1,4 @@
-import define::*;
+`include "define.svh"
 
 module if_id_tb;
     logic clk, reset;

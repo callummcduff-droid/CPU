@@ -1,4 +1,4 @@
-import define::*;
+`include "define.svh"
 
 module test_cpu;
 

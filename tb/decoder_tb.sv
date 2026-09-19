@@ -1,4 +1,4 @@
-import define::*;
+`include "define.svh"
 
 module decoder_tb;
     logic [15:0] instruction;

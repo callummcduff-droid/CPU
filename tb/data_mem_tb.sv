@@ -1,4 +1,4 @@
-import define::*;
+`include "define.svh"
 
 module data_mem_tb;
 
